@@ -20,11 +20,11 @@
                 </tr>
                 <tr>
                     <td><label for="userLastName">Apellidos&#58; </label></td>
-                    <td><input type="text" id="userLastName" name="userLastName" placeholder="Perez" autofocus tabindex="2" autocomplete="on"></td>
+                    <td><input type="text" id="userLastName" name="userLastName" placeholder="Perez" tabindex="2" autocomplete="on"></td>
                 </tr>
                 <tr>
                     <td><label for="age"></label>Edad&#58;</td>
-                    <td><input type="number" id="age" name="age" placeholder="72" autofocus tabindex="3" autocomplete="on" min="60" max="100"></td>
+                    <td><input type="number" id="age" name="age" placeholder="72" tabindex="3" autocomplete="on" min="60" max="100"></td>
                 </tr>
                 <tr>
                     <td><label for="sexM">Sexo&#58; </label></td>
@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                     <td><label for="persOpn">Escribe algo sobre ti</label></td>
-                    <td><textarea placeholder="Max. 200 caracteres" maxlength="200" autofocus tabindex="6"></textarea></td>
+                    <td><textarea placeholder="Max. 200 caracteres" maxlength="200" tabindex="6"></textarea></td>
                 </tr>
             </table>
         </fieldset>
@@ -50,15 +50,15 @@
             <table>
                 <tr>
                     <td><label for="mail">Correo&#58; </label></td>
-                    <td><input type="email" id="mail" name="mail" placeholder="ejemplo@unsitio.com" autofocus tabindex="7" autocomplete="email"></td>
+                    <td><input type="email" id="mail" name="mail" placeholder="ejemplo@unsitio.com" tabindex="7" autocomplete="email"></td>
                 </tr>
                 <tr>
                     <td><label for="tel">Tel&#233;fono&#58; </label></td>
-                    <td><input type="number" id="tel" name="tel" placeholder="655656565" autofocus tabindex="8" autocomplete="mobile"></td>
+                    <td><input type="number" id="tel" name="tel" placeholder="655656565" tabindex="8" autocomplete="mobile"></td>
                 </tr>
                 <tr>
-                    <td><input type="reset" name="reset" id="reset" value="Cancelar" tabindex="10"></td>
-                    <td><input type="submit" name="submit" id="submit" value="Registrarme" tabindex="9"></td>
+                    <td><button type="reset" tabindex="10">Cancelar</button></td>
+                    <td><button type="submit" id="submit" tabindex="9">Registrarme</button></td>
                 </tr>
             </table>
         </fieldset>
@@ -72,23 +72,24 @@
             <table>
                 <tr>
                     <td><label for="fecha">Fecha&#58; </label></td>
-                    <td><input type="date" id="fecha" name="fecha" autofocus tabindex="11"></td>
+                    <td><input type="date" id="fecha" name="fecha" tabindex="11"></td>
                 </tr>
                 <tr>
                     <td><label for="hora">Hora&#58; </label></td>
-                    <td><input type="time" id="hora" name="hora" autofocus tabindex="12"></td>
+                    <td><input type="time" id="hora" name="hora" tabindex="12"></td>
                 </tr>
                 <tr>
                     <td><label for="bikeColour"></label>Color de la bicicleta&#58;</td>
-                    <td><input type="color" id="bikeColour" name="bikeColour" autofocus tabindex="13"></td>
+                    <td><input type="color" id="bikeColour" name="bikeColour" tabindex="13"></td>
                 </tr>
                 <tr>
                     <td><label for="price">Precio &#40;entre 0 y 500&#41;&#58; </label></td>
-                    <td><input type="range" id="price" name="price" min="0" max="500" autofocus tabindex="14"></td>
+                    <td><input type="range" id="price" name="price" min="0" max="500" tabindex="14"></td>
                 </tr>
                 <tr>
                     <td><label for="bikeType">Tipo de bicicleta&#58; </label></td>
-                    <td><select name="bikeType" id="bikeType" autofocus tabindex="15">
+                    <td><select name="bikeType" id="bikeType" tabindex="15">
+                        <option value="vacio" selected>-- Elige el tipo de bicicleta --</option>
                         <optgroup label="Paseo">
                             <option value="Senioral">Se&ntilde;orial</option>
                             <option value="AntiPlebeyos">Anti&#45;plebeyos</option>
@@ -108,20 +109,23 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="accesories">Accesorios&#58;</label></td>
-                    <td><select id="accesories" name="accesories" autofocus tabindex="16" multiple>
-                            <option value="Ruedines">Ruedines</option>
-                            <option value="Pegatinas">Pegatinas</option>
-                            <option value="Cestita">Cestita</option>
-                            <option value="BombAire">Bomba de aire</option>
-                            <option value="Timbre">Timbre</option>
-                            <option value="Foco">Foco</option>
+                    <td><label for="accesories">Accesorios (mantenga pulsado "ctrl" para seleccionar más de uno)&#58;</label></td>
+                    <td><select id="accesories" name="accesories" tabindex="16" multiple>
+                            <optgroup>
+                                <option value="vacio" selected>Seleccione los accesorios</option>
+                                <option value="Ruedines">Ruedines</option>
+                                <option value="Pegatinas">Pegatinas</option>
+                                <option value="Cestita">Cestita</option>
+                                <option value="BombAire">Bomba de aire</option>
+                                <option value="Timbre">Timbre</option>
+                                <option value="Foco">Foco</option>
+                            </optgroup>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td><label for="marca">&#191;Qu&#233; marca era&#63;</label></td>
-                    <td><input list="marca" autofocus tabindex="17"><datalist id="marca" aria-autocomplete="list">
+                    <td><input list="marca" tabindex="17"  id="marca" name="marca" placeholder="Elige la marca"><datalist aria-autocomplete="list">
                             <option value="specialized">specialized</option>
                             <option value="trek">trek</option>
                             <option value="merida">merida</option>
@@ -147,8 +151,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="reset" name="resetPolForm" id="resetPolForm" value="Cancelar" tabindex="19"></td>
-                    <td><input type="submit" name="submitPolForm" id="submitPolForm" value="Enviar" tabindex="18"></td>
+                    <td><button type="reset" tabindex="19">Cancelar</button></td>
+                    <td><button type="submit" id="submit" tabindex="18">Enviar</button></td>
                 </tr>
             </table>
         </fieldset>
